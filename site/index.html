@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outils agricoles · outils-agri</title>
+  <meta name="description" content="Glossaire illustré des outils, machines et techniques agricoles, avec des croquis SVG dessinés à la main et les termes en français, allemand et anglais. Trois esquisses thématiques.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="css/agri.css">
+  <script>
+    // Apply the saved theme before first paint (no flash).
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#outils">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+        <path d="M6 26 V12 q0 -6 6 -6 h6 q6 0 6 6 v14" fill="none" stroke="var(--green-ink)" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M15 26 V16" fill="none" stroke="var(--cyan-strong)" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M11 19 q-5 -2 -6 3 q5 2 6 -3 M19 19 q5 -2 6 3 q-5 2 -6 -3" fill="var(--leaf)"/>
+      </svg>
+      <span data-i18n="shell.home">outils-agri</span>
+    </a>
+    <div class="header-tools">
+      <div class="seg" role="group" aria-label="Language / Langue">
+        <button type="button" data-lang-btn="fr" lang="fr">FR</button>
+        <button type="button" data-lang-btn="en" lang="en">EN</button>
+      </div>
+      <button type="button" class="chip-btn" data-theme-btn data-i18n-attr="aria-label:shell.theme;title:shell.theme">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5 A6.5 6.5 0 0 1 8 14.5 Z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+  <!-- The tab bar is built by app.js from its TABS list. -->
+  <nav class="tabs" id="tabs" data-i18n-attr="aria-label:shell.tabs" aria-label="Onglets"></nav>
+  <div class="strata" aria-hidden="true"></div>
+
+  <main>
+    <noscript><p>Cette page nécessite JavaScript. / This page needs JavaScript.</p></noscript>
+
+    <!-- Tab: tools and machines. Filled by tabs/glossary.js. -->
+    <div class="tab-panel" id="tab-outils" data-tab-panel="outils" hidden>
+      <section class="section-panel" data-section-panel="main" aria-label="Outils et machines">
+        <div id="glossary-root"></div>
+      </section>
+    </div>
+
+    <!-- Tab: techniques. Filled by tabs/techniques.js. -->
+    <div class="tab-panel" id="tab-techniques" data-tab-panel="techniques" hidden>
+      <section class="section-panel" data-section-panel="main" aria-label="Techniques">
+        <div id="techniques-root"></div>
+      </section>
+    </div>
+
+    <!-- Tab: thematic sketches. Filled by tabs/sketches.js. -->
+    <div class="tab-panel" id="tab-esquisses" data-tab-panel="esquisses" hidden>
+      <section class="section-panel" data-section-panel="main" aria-label="Esquisses thématiques">
+        <div id="sketches-root"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer">Projet personnel indépendant, sans pistage. Textes et dessins originaux ; les faits viennent des sources citées en bas de chaque onglet ; la langue et le thème sont enregistrés dans le navigateur, rien d’autre.</p>
+  </footer>
+</body>
+</html>
