@@ -1,0 +1,162 @@
+/* Styles specific to outils-agri: glossary cards, term tables, the three
+   large sketches, and the colours of the hand-drawn SVGs. Loaded after
+   assets/site.css, whose layout and light/dark tokens it reuses. */
+
+:root {
+  --steel: #8a9791;
+  --steel-dark: #5c6a64;
+  --steel-line: #45534e;
+  --wood: #b07a41;
+  --wood-dark: #7b5128;
+  --leaf: #2f8f5b;
+  --leaf-light: #67b985;
+  --soil: #a6764a;
+  --soil-deep: #6e4828;
+  --water: #1a93ad;
+  --badge: #146b45;
+  --on-badge: #ffffff;
+}
+
+:root[data-theme="dark"] {
+  --steel: #9aa8a2;
+  --steel-dark: #6d7b75;
+  --steel-line: #b9c6bf;
+  --wood: #c68d50;
+  --wood-dark: #8d6033;
+  --leaf: #4fb37a;
+  --leaf-light: #7ccb99;
+  --soil: #a97a50;
+  --soil-deep: #7a5330;
+  --water: #38b3cc;
+  --badge: #0f5b3a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    --steel: #9aa8a2;
+    --steel-dark: #6d7b75;
+    --steel-line: #b9c6bf;
+    --wood: #c68d50;
+    --wood-dark: #8d6033;
+    --leaf: #4fb37a;
+    --leaf-light: #7ccb99;
+    --soil: #a97a50;
+    --soil-deep: #7a5330;
+    --water: #38b3cc;
+    --badge: #0f5b3a;
+  }
+}
+
+/* The band under the header: a field strip, green over soil over water. */
+.strata {
+  background: linear-gradient(90deg, var(--leaf) 0 42%, var(--soil) 42% 78%, var(--water) 78% 100%);
+}
+
+.lead {
+  font-size: clamp(1rem, 0.95rem + 0.35vw, 1.15rem);
+  color: var(--ink-2);
+  max-width: 72ch;
+}
+
+h1 { margin-top: 10px; }
+
+/* Glossaries ------------------------------------------------------------ */
+.category { margin: 28px 0 8px; }
+.category-head {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  border-bottom: 2px solid var(--hairline); padding-bottom: 6px; margin-bottom: 14px;
+}
+.category-head h2 { margin: 0; }
+.count {
+  font-size: 0.8rem; color: var(--ink-2); background: var(--surface-2);
+  border-radius: 999px; padding: 2px 9px; white-space: nowrap;
+}
+.cards {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+  align-items: start;
+}
+.entry { display: flex; flex-direction: column; gap: 8px; margin: 0; }
+.entry h2, .entry h3 { margin: 0; }
+.entry-art {
+  margin: 0; background: var(--surface-2); border-radius: 10px; padding: 8px;
+}
+.entry-art svg { width: 100%; height: auto; display: block; }
+.entry-body { margin: 0; font-size: 0.95rem; }
+.entry-src { margin: 0; }
+.entry .note { margin: 0; }
+.entry .note::before { content: ""; }
+
+/* FR / DE / EN block ---------------------------------------------------- */
+.terms {
+  display: grid; gap: 3px; margin: 0;
+  font-size: 0.9rem; background: var(--surface-2); border-radius: 9px; padding: 8px 10px;
+}
+.terms .term { display: grid; grid-template-columns: 2.3em 1fr; gap: 6px; align-items: baseline; }
+.terms dt { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink-2); }
+.terms dd { margin: 0; }
+.terms .alt { color: var(--ink-2); font-size: 0.85em; }
+.unsure {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.15em; height: 1.15em; margin-left: 4px;
+  border-radius: 50%; background: var(--yellow-wash); color: var(--ink);
+  font-size: 0.8em; font-weight: 700; cursor: help; vertical-align: 0.05em;
+}
+
+/* Sources --------------------------------------------------------------- */
+.sources { margin-top: 34px; }
+.sources h2 { margin-bottom: 10px; }
+.sources li.is-target { background: var(--note); border-radius: 6px; }
+.src-n { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+/* Large sketches -------------------------------------------------------- */
+.sketch {
+  margin: 26px 0 34px; padding: 18px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.sketch h2 { margin-bottom: 4px; }
+.sketch-art {
+  margin: 12px 0 14px; padding: 10px; background: var(--surface-2);
+  border-radius: 12px; border: 1px solid var(--hairline);
+}
+.sketch-art svg { width: 100%; height: auto; display: block; }
+.sketch-legend {
+  list-style: none; padding: 0; margin: 0 0 14px;
+  display: grid; gap: 6px 18px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  font-size: 0.92rem;
+}
+.sketch-legend li { display: flex; align-items: baseline; gap: 8px; }
+.sketch-legend strong { white-space: nowrap; }
+.legend-n {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 1.6em; height: 1.6em; border-radius: 50%;
+  background: var(--badge); color: var(--on-badge);
+  font-size: 0.8rem; font-weight: 700;
+}
+.sketch-text { max-width: 74ch; }
+.sketch-text p { font-size: 0.97rem; }
+
+/* SVG sketch colours (shared by every drawing) -------------------------- */
+.s { fill: none; stroke: var(--ink); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.s2 { fill: none; stroke: var(--ink-2); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.metal { fill: var(--steel); stroke: var(--steel-line); stroke-width: 1.4; stroke-linejoin: round; }
+.metal-d { fill: var(--steel-dark); stroke: var(--steel-line); stroke-width: 1; }
+.wood { fill: var(--wood); stroke: var(--wood-dark); stroke-width: 1.2; stroke-linejoin: round; }
+.leaf { fill: var(--leaf); }
+.soil { fill: var(--soil); }
+.soil-d { fill: var(--soil-deep); }
+.water { fill: var(--water); }
+.water-s { fill: none; stroke: var(--water); stroke-width: 3; stroke-linecap: round; }
+.warn { fill: none; stroke: var(--danger); stroke-width: 2; stroke-linecap: round; }
+.lbl { font-size: 12px; fill: var(--ink); font-family: var(--font); }
+.lbl-s { font-size: 10px; fill: var(--ink-2); font-family: var(--font); }
+.badge { fill: var(--badge); stroke: var(--surface); stroke-width: 2; }
+.badge-t { font: 700 12px var(--font); fill: var(--on-badge); }
+
+@media (max-width: 560px) {
+  .cards { grid-template-columns: minmax(0, 1fr); }
+  .sketch { padding: 12px; }
+  .sketch-legend { grid-template-columns: minmax(0, 1fr); }
+  .entry-body { font-size: 1rem; }
+}
