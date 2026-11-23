@@ -14,12 +14,13 @@ Planned address: <https://agri.divergences.xyz> (GitHub Pages).
 A tab bar at the top with three tabs:
 
 - **Outils et machines** (`#outils`): a glossary of **19 tools and machines**
-  (16 cards, because the grelinette belongs to two categories), grouped into
-  four categories:
-  - **Travail du sol** (5): sous-soleuse, décompacteur, fissurateur,
-    grelinette, rotavator.
+  (21 cards, because the grelinette and the bêche each belong to two
+  categories), grouped into four categories:
+  - **Travail du sol** (6): sous-soleuse, décompacteur, fissurateur,
+    grelinette, rotavator, bêche.
   - **Broyage et fauche** (3): broyeur de végétaux, gyrobroyeur, tronçonneuse.
-  - **Outils à main** (3): grelinette, râteau (Harke/Rechen), tournevis.
+  - **Outils à main** (7): grelinette, râteau (Harke/Rechen), tournevis,
+    bêche, scie à onglet, équerre, visseuse.
   - **Irrigation et eau** (5): goutte-à-goutte, vanne électrique, borne
     d’irrigation, forage, nappe phréatique.
 

@@ -308,7 +308,7 @@ export const TOOL_DRAWINGS = {
       <path d="M42 84 v-9"/><path d="M56 84 v-9"/><path d="M70 84 v-9"/><path d="M84 84 v-9"/>
       <path d="M110 70 h9"/><path d="M110 52 h9"/><path d="M110 34 h9"/>
     </g>
-    <text x="80" y="116" class="lbl-s" text-anchor="middle">angle droit · Anschlagwinkel</text>
+    <text x="80" y="116" class="lbl-s" text-anchor="middle">angle droit · Winkel</text>
   </svg>`,
 
   visseuse: `<svg viewBox="0 0 160 120" role="img" aria-hidden="true">

@@ -151,15 +151,20 @@ export const SOURCES = {
     url: 'https://en.wikipedia.org/wiki/Miter_saw',
     note: 'Miter saw : scie à onglet, lame circulaire sur bras pivotant pour les coupes d’angle.',
   },
+  'wiki-gehrungssaege': {
+    title: 'Wikipédia (de), « Gehrungssäge »',
+    url: 'https://de.wikipedia.org/wiki/Gehrungss%C3%A4ge',
+    note: 'Gehrungssäge : scie à onglet, pour couper le bois à un angle précis.',
+  },
   'wiki-equerre': {
     title: 'Wikipédia (fr), « Équerre »',
     url: 'https://fr.wikipedia.org/wiki/%C3%89querre',
     note: 'Équerre : instrument à deux branches à angle droit, pour tracer ou vérifier un angle droit.',
   },
-  'wiki-anschlagwinkel': {
-    title: 'Wikipédia (de), « Anschlagwinkel »',
-    url: 'https://de.wikipedia.org/wiki/Anschlagwinkel',
-    note: 'Anschlagwinkel : équerre à talon, pour marquer, vérifier et aligner ; classes de précision DIN 875.',
+  'wiki-winkel': {
+    title: 'Wikipédia (de), « Winkel (Werkzeug) »',
+    url: 'https://de.wikipedia.org/wiki/Winkel_(Werkzeug)',
+    note: 'Winkel (Werkzeug) : équerre, instrument à deux branches pour tracer et vérifier les angles droits.',
   },
   'wiki-visseuse': {
     title: 'Wikipédia (fr), « Visseuse »',
