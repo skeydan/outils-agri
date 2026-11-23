@@ -270,4 +270,56 @@ export const TOOL_DRAWINGS = {
     </g>
     <text x="80" y="116" class="lbl-s" text-anchor="middle">nappe libre peu profonde</text>
   </svg>`,
+
+  beche: `<svg viewBox="0 0 160 120" role="img" aria-hidden="true">
+    <rect x="0" y="94" width="160" height="26" class="soil"/>
+    <rect x="0" y="94" width="160" height="5" class="soil-d"/>
+    <g class="s">
+      <path d="M60 16 h40" class="wood" stroke-width="7" stroke-linecap="round"/>
+      <path d="M80 18 v52" class="wood" stroke-width="6"/>
+      <path d="M67 70 h26 l-4 22 q-5 4 -9 0 l-9 -22 z" class="metal"/>
+      <path d="M80 72 l0 14" class="metal-d"/>
+    </g>
+    <text x="80" y="116" class="lbl-s" text-anchor="middle">lame plate · on l’enfonce au pied</text>
+  </svg>`,
+
+  'scie-a-onglet': `<svg viewBox="0 0 160 120" role="img" aria-hidden="true">
+    <g class="s">
+      <path d="M16 90 h128 v8 h-128 z" class="metal"/>
+      <path d="M40 90 v-30 h10 v30" class="metal-d"/>
+      <path d="M45 60 l-10 -16 h9 l8 12" class="metal"/>
+      <path d="M45 64 q22 -22 46 0" class="metal"/>
+      <circle cx="70" cy="62" r="17" class="metal-d"/><circle cx="70" cy="62" r="11" class="metal"/>
+      <path d="M60 32 h18 v8 h-18 z" class="metal-d"/>
+    </g>
+    <g class="wood">
+      <path d="M96 90 h48 v9 h-48 z"/>
+    </g>
+    <path d="M100 90 v9 M112 90 v9 M124 90 v9 M136 90 v9" class="s2"/>
+    <text x="80" y="116" class="lbl-s" text-anchor="middle">lame circulaire · coupe en onglet</text>
+  </svg>`,
+
+  equerre: `<svg viewBox="0 0 160 120" role="img" aria-hidden="true">
+    <g class="s">
+      <path d="M28 84 h92 v15 h-92 z" class="metal"/>
+      <path d="M104 84 h17 v-80 h-15 z" class="metal-d"/>
+    </g>
+    <g class="s2">
+      <path d="M42 84 v-9"/><path d="M56 84 v-9"/><path d="M70 84 v-9"/><path d="M84 84 v-9"/>
+      <path d="M110 70 h9"/><path d="M110 52 h9"/><path d="M110 34 h9"/>
+    </g>
+    <text x="80" y="116" class="lbl-s" text-anchor="middle">angle droit · Anschlagwinkel</text>
+  </svg>`,
+
+  visseuse: `<svg viewBox="0 0 160 120" role="img" aria-hidden="true">
+    <g class="s">
+      <path d="M44 50 h60 v18 h-60 z" class="metal-d"/>
+      <path d="M104 52 h12 v14 h-12 z" class="metal"/>
+      <path d="M116 59 h10" class="s2" stroke-width="4"/>
+      <path d="M40 62 h12 v24 h-12 z" class="metal"/>
+      <path d="M40 86 h20 v12 h-20 z" class="wood"/>
+      <path d="M64 44 q8 -7 16 0" class="s2"/>
+    </g>
+    <text x="80" y="116" class="lbl-s" text-anchor="middle">sans fil · couple limité</text>
+  </svg>`,
 };

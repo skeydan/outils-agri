@@ -68,12 +68,15 @@ test('every entry has a hand-drawn SVG', () => {
 
 test('the four categories have the expected entries', () => {
   const count = (id) => ENTRIES.filter((e) => e.categories.includes(id)).length;
-  assert.equal(count('sol'), 5);
+  assert.equal(count('sol'), 6);
   assert.equal(count('broyage'), 3);
-  assert.equal(count('main'), 3);
+  assert.equal(count('main'), 7);
   assert.equal(count('eau'), 5);
-  // The grelinette is both a soil tool and a hand tool, written once.
+  // The grelinette and the bêche are each both a soil tool and a hand tool, written once.
   const grelinette = ENTRIES.filter((e) => e.id === 'grelinette');
   assert.equal(grelinette.length, 1);
   assert.deepEqual(grelinette[0].categories.sort(), ['main', 'sol']);
+  const beche = ENTRIES.filter((e) => e.id === 'beche');
+  assert.equal(beche.length, 1);
+  assert.deepEqual(beche[0].categories.sort(), ['main', 'sol']);
 });

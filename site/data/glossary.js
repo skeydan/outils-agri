@@ -208,6 +208,53 @@ export const ENTRIES = [
     },
     sources: ['wiki-nappe'],
   },
+  {
+    id: 'beche',
+    term: { fr: 'Bêche', de: 'Spaten', en: 'Spade' },
+    categories: ['sol', 'main'],
+    drawing: 'beche',
+    body: {
+      fr: 'Outil à main pour creuser et retourner la terre : une lame plate en acier au bout d’un manche, que l’on enfonce avec le pied puis bascule. À la différence de la pelle, qui déplace de la matière, la bêche découpe et retourne le sol sur place. Elle sert à préparer une planche, un trou de plantation ou à incorporer du compost.',
+      en: 'A hand tool for digging and turning soil: a flat steel blade at the end of a handle, driven in with the foot and levered back. Unlike a shovel, which moves material, a spade cuts and turns the soil in place. It prepares a bed, a planting hole, or works in compost.',
+    },
+    sources: ['wiki-beche', 'wiki-spaten'],
+  },
+  {
+    id: 'scie-a-onglet',
+    term: { fr: 'Scie à onglet', de: 'Kapp- und Gehrungssäge', en: 'Miter saw' },
+    alt: { de: 'Kappsäge' },
+    categories: ['main'],
+    drawing: 'scie-a-onglet',
+    body: {
+      fr: 'Scie destinée à couper du bois à un angle précis. Deux formes existent : la scie à onglet manuelle, utilisée avec une boîte à onglets qui guide la lame, et la scie à onglet électrique, à lame circulaire montée sur un bras pivotant. Elle sert aux encadrements, plinthes et assemblages d’angle.',
+      en: 'A saw for cutting wood at a precise angle. Two forms exist: the manual miter saw, used with a miter box that guides the blade, and the power miter saw, with a circular blade on a pivoting arm. It is used for frames, skirting boards and angled joints.',
+    },
+    sources: ['wiki-scie-a-onglet', 'wiki-miter-saw'],
+  },
+  {
+    id: 'equerre',
+    term: { fr: 'Équerre', de: 'Anschlagwinkel', en: 'Square' },
+    alt: { en: 'try square', de: 'Winkel' },
+    categories: ['main'],
+    drawing: 'equerre',
+    body: {
+      fr: 'Instrument formé de deux branches ajustées à angle droit, pour tracer ou vérifier un angle droit. La branche épaisse, le talon, s’appuie sur le chant de la pièce, l’autre sert de règle. Les modèles gradués permettent aussi de mesurer et de reporter des cotes.',
+      en: 'An instrument made of two arms set at a right angle, for drawing or checking a square corner. The thick arm, the stock, rests against the edge of the piece; the other is a rule. Graduated models also measure and transfer dimensions.',
+    },
+    sources: ['wiki-equerre', 'wiki-anschlagwinkel'],
+  },
+  {
+    id: 'visseuse',
+    term: { fr: 'Visseuse', de: 'Akkuschrauber', en: 'Cordless screwdriver' },
+    alt: { en: 'power screwdriver' },
+    categories: ['main'],
+    drawing: 'visseuse',
+    body: {
+      fr: 'Outil électrique portatif, le plus souvent sans fil, pour visser et dévisser rapidement. Un mandrin tient l’embout adapté à la tête de vis, et un coupleur limite le serrage pour ne pas abîmer la vis ni la pièce. Contrairement au tournevis, c’est le moteur qui fait le travail.',
+      en: 'A portable power tool, usually cordless, for driving and removing screws quickly. A chuck holds the bit that matches the screw head, and a clutch limits the torque so the screw and the piece are not damaged. Unlike a hand screwdriver, the motor does the work.',
+    },
+    sources: ['wiki-visseuse', 'wiki-akkuschrauber'],
+  },
 ];
 
 // Source ids used by this tab, in the order they are numbered at the bottom.
@@ -229,4 +276,12 @@ export const SOURCE_ORDER = [
   'afnor-borne',
   'wiki-forage',
   'wiki-nappe',
+  'wiki-beche',
+  'wiki-spaten',
+  'wiki-scie-a-onglet',
+  'wiki-miter-saw',
+  'wiki-equerre',
+  'wiki-anschlagwinkel',
+  'wiki-visseuse',
+  'wiki-akkuschrauber',
 ];

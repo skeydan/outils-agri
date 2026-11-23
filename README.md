@@ -13,7 +13,7 @@ Planned address: <https://agri.divergences.xyz> (GitHub Pages).
 
 A tab bar at the top with three tabs:
 
-- **Outils et machines** (`#outils`): a glossary of **15 tools and machines**
+- **Outils et machines** (`#outils`): a glossary of **19 tools and machines**
   (16 cards, because the grelinette belongs to two categories), grouped into
   four categories:
   - **Travail du sol** (5): sous-soleuse, décompacteur, fissurateur,
@@ -134,7 +134,7 @@ site/
   assets/site.css         shared tokens and layout
   assets/ui.js            small DOM helpers
   css/agri.css            cards, term tables, sketches, SVG colours
-  data/glossary.js        the 15 tools and 4 categories
+  data/glossary.js        the 19 tools and 4 categories
   data/techniques.js      the 8 techniques
   data/sketches.js        the 3 large sketches (titles, legends, texts)
   data/sources.js         every source, by id

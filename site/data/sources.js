@@ -131,4 +131,44 @@ export const SOURCES = {
     url: 'https://fr.wikipedia.org/wiki/Pompe',
     note: 'Pompe : machine qui déplace un liquide en lui fournissant de l’énergie.',
   },
+  'wiki-beche': {
+    title: 'Wikipédia (fr), « Bêche »',
+    url: 'https://fr.wikipedia.org/wiki/B%C3%AAche',
+    note: 'Bêche : outil à main à lame plate, pour creuser, retourner et ameublir le sol.',
+  },
+  'wiki-spaten': {
+    title: 'Wikipédia (de), « Spaten »',
+    url: 'https://de.wikipedia.org/wiki/Spaten',
+    note: 'Spaten : outil de bêchage à lame plate et manche (français bêche, anglais spade).',
+  },
+  'wiki-scie-a-onglet': {
+    title: 'Wikipédia (fr), « Scie à onglet »',
+    url: 'https://fr.wikipedia.org/wiki/Scie_%C3%A0_onglet',
+    note: 'Scie à onglet : coupe de précision à angle, version manuelle (boîte à onglets) et électrique.',
+  },
+  'wiki-miter-saw': {
+    title: 'Wikipédia (en), « Miter saw »',
+    url: 'https://en.wikipedia.org/wiki/Miter_saw',
+    note: 'Miter saw : scie à onglet, lame circulaire sur bras pivotant pour les coupes d’angle.',
+  },
+  'wiki-equerre': {
+    title: 'Wikipédia (fr), « Équerre »',
+    url: 'https://fr.wikipedia.org/wiki/%C3%89querre',
+    note: 'Équerre : instrument à deux branches à angle droit, pour tracer ou vérifier un angle droit.',
+  },
+  'wiki-anschlagwinkel': {
+    title: 'Wikipédia (de), « Anschlagwinkel »',
+    url: 'https://de.wikipedia.org/wiki/Anschlagwinkel',
+    note: 'Anschlagwinkel : équerre à talon, pour marquer, vérifier et aligner ; classes de précision DIN 875.',
+  },
+  'wiki-visseuse': {
+    title: 'Wikipédia (fr), « Visseuse »',
+    url: 'https://fr.wikipedia.org/wiki/Visseuse',
+    note: 'Visseuse : machine à visser et dévisser avec coupleur de serrage ; versions sans fil et pneumatiques.',
+  },
+  'wiki-akkuschrauber': {
+    title: 'Wikipédia (de), « Akkuschrauber »',
+    url: 'https://de.wikipedia.org/wiki/Akkuschrauber',
+    note: 'Akkuschrauber : visseuse sans fil (français visseuse, anglais cordless screwdriver).',
+  },
 };
