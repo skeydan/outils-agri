@@ -176,6 +176,11 @@ export const SOURCES = {
     url: 'https://de.wikipedia.org/wiki/Akkuschrauber',
     note: 'Akkuschrauber : visseuse sans fil (français visseuse, anglais cordless screwdriver).',
   },
+  'wiki-handgrubber': {
+    title: 'Wikipédia (de), « Handgrubber »',
+    url: 'https://de.wikipedia.org/wiki/Handgrubber',
+    note: 'Griffe à main en acier, 3 à 5 pointes imitant une patte de poule, manche court ; ameublit, prépare la plantation, arrache les adventices.',
+  },
   'wiki-griffe': {
     title: 'Wikipédia (fr), « Croc à fumier » (griffe de jardin)',
     url: 'https://fr.wikipedia.org/wiki/Croc_%C3%A0_fumier',

@@ -261,16 +261,16 @@ export const ENTRIES = [
   },
   {
     id: 'griffe',
-    term: { fr: 'Griffe', de: 'Krail', en: 'Hand cultivator' },
-    alt: { fr: 'griffe de jardin, croc à fumier', de: 'Kralle, Dunghaken', en: 'claw, grubber' },
+    term: { fr: 'Griffe', de: 'Handgrubber', en: 'Hand cultivator' },
+    alt: { fr: 'griffe de jardin, griffe à gratter', de: 'Kleingrubber, Hühnerkralle', en: 'claw, hand fork' },
     unsure: ['en'],
     categories: ['main'],
     drawing: 'griffe',
     body: {
-      fr: 'Outil à main à manche long et à trois ou quatre dents courbes, montées sur une douille. On tire l’outil vers soi pour émietter les mottes, ameublir et aplanir la surface du sol après le bêchage, sans la retourner. Sous le nom de croc à fumier, la griffe sert aussi à remuer le compost et le fumier.',
-      en: 'A hand tool with a long handle and three or four curved tines set in a socket. Pulled towards you, it crumbles clods, loosens and levels the soil surface after digging, without turning it over. As a manure fork, the griffe also turns compost and dung.',
+      fr: 'Outil à main à manche court et à trois à cinq griffes métalliques courbes, imitées de la patte d’une poule. On le passe sur la surface du sol pour ameublir, gratter et arracher les jeunes adventices, sur de petites surfaces (massifs, plates-bandes) sans retourner la terre. La version à long manche, le croc à fumier (allemand Krail), remue le compost et le fumier.',
+      en: 'A hand tool with a short handle and three to five curved metal prongs, modelled on a hen’s foot. Drawn across the soil surface, it loosens the top layer, scratches and pulls up young weeds on small areas (beds, borders) without turning the earth. The long-handled version, the manure fork (German Krail), turns compost and dung.',
     },
-    sources: ['wiki-griffe', 'wiki-krail'],
+    sources: ['wiki-handgrubber', 'wiki-griffe', 'wiki-krail'],
   },
 ];
 
@@ -302,6 +302,7 @@ export const SOURCE_ORDER = [
   'wiki-winkel',
   'wiki-visseuse',
   'wiki-akkuschrauber',
+  'wiki-handgrubber',
   'wiki-griffe',
   'wiki-krail',
 ];

@@ -20,7 +20,7 @@ A tab bar at the top with three tabs:
     grelinette, rotavator, bêche.
   - **Broyage et fauche** (3): broyeur de végétaux, gyrobroyeur, tronçonneuse.
   - **Outils à main** (8): grelinette, râteau (Harke/Rechen), tournevis,
-    bêche, scie à onglet, équerre, visseuse, griffe (Krail).
+    bêche, scie à onglet, équerre, visseuse, griffe (Handgrubber).
   - **Irrigation et eau** (5): goutte-à-goutte, vanne électrique, borne
     d’irrigation, forage, nappe phréatique.
 
