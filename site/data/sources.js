@@ -176,4 +176,14 @@ export const SOURCES = {
     url: 'https://de.wikipedia.org/wiki/Akkuschrauber',
     note: 'Akkuschrauber : visseuse sans fil (français visseuse, anglais cordless screwdriver).',
   },
+  'wiki-griffe': {
+    title: 'Wikipédia (fr), « Croc à fumier » (griffe de jardin)',
+    url: 'https://fr.wikipedia.org/wiki/Croc_%C3%A0_fumier',
+    note: 'Griffe de jardin à trois ou quatre dents, manche à douille ; émiette et aplanit le sol après le bêchage, remue le compost et le fumier.',
+  },
+  'wiki-krail': {
+    title: 'Wikipédia (de), « Krail »',
+    url: 'https://de.wikipedia.org/wiki/Krail',
+    note: 'Handwerkzeug zur Bodenbearbeitung ; drei oder vier Zinken, Tülle (douille) ; synonymes : Kralle, Dunghaken, Dungharke, Vierzahn…',
+  },
 };

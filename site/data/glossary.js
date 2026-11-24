@@ -259,6 +259,19 @@ export const ENTRIES = [
     },
     sources: ['wiki-visseuse', 'wiki-akkuschrauber'],
   },
+  {
+    id: 'griffe',
+    term: { fr: 'Griffe', de: 'Krail', en: 'Hand cultivator' },
+    alt: { fr: 'griffe de jardin, croc à fumier', de: 'Kralle, Dunghaken', en: 'claw, grubber' },
+    unsure: ['en'],
+    categories: ['main'],
+    drawing: 'griffe',
+    body: {
+      fr: 'Outil à main à manche long et à trois ou quatre dents courbes, montées sur une douille. On tire l’outil vers soi pour émietter les mottes, ameublir et aplanir la surface du sol après le bêchage, sans la retourner. Sous le nom de croc à fumier, la griffe sert aussi à remuer le compost et le fumier.',
+      en: 'A hand tool with a long handle and three or four curved tines set in a socket. Pulled towards you, it crumbles clods, loosens and levels the soil surface after digging, without turning it over. As a manure fork, the griffe also turns compost and dung.',
+    },
+    sources: ['wiki-griffe', 'wiki-krail'],
+  },
 ];
 
 // Source ids used by this tab, in the order they are numbered at the bottom.
@@ -289,4 +302,6 @@ export const SOURCE_ORDER = [
   'wiki-winkel',
   'wiki-visseuse',
   'wiki-akkuschrauber',
+  'wiki-griffe',
+  'wiki-krail',
 ];

@@ -322,4 +322,20 @@ export const TOOL_DRAWINGS = {
     </g>
     <text x="80" y="116" class="lbl-s" text-anchor="middle">sans fil · couple limité</text>
   </svg>`,
+
+  griffe: `<svg viewBox="0 0 160 120" role="img" aria-hidden="true">
+    <rect x="0" y="94" width="160" height="26" class="soil"/>
+    <rect x="0" y="94" width="160" height="5" class="soil-d"/>
+    <g class="s">
+      <path d="M80 14 v58" class="wood" stroke-width="6"/>
+      <path d="M62 72 h36 v7 h-36 z" class="metal"/>
+      <path d="M64 79 q-2 12 -6 18" class="metal" stroke-width="3"/>
+      <path d="M80 79 q0 14 0 18" class="metal" stroke-width="3"/>
+      <path d="M96 79 q2 12 6 18" class="metal" stroke-width="3"/>
+    </g>
+    <g class="s2 metal">
+      <path d="M58 97 q-3 4 0 6"/><path d="M80 97 q0 5 0 6"/><path d="M102 97 q3 4 0 6"/>
+    </g>
+    <text x="80" y="116" class="lbl-s" text-anchor="middle">3 à 4 dents · on tire vers soi</text>
+  </svg>`,
 };
