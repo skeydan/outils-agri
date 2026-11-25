@@ -339,4 +339,19 @@ export const TOOL_DRAWINGS = {
     </g>
     <text x="80" y="116" class="lbl-s" text-anchor="middle">3 à 5 griffes · ameublit en surface</text>
   </svg>`,
+
+  herse: `<svg viewBox="0 0 160 120" role="img" aria-hidden="true">
+    <rect x="0" y="88" width="160" height="32" class="soil"/>
+    <rect x="0" y="88" width="160" height="6" class="soil-d"/>
+    <g class="s">
+      <rect x="30" y="32" width="104" height="8" rx="2" class="wood"/>
+      <path d="M40 40 v48" class="metal"/><path d="M56 40 v48" class="metal"/><path d="M72 40 v48" class="metal"/>
+      <path d="M88 40 v48" class="metal"/><path d="M104 40 v48" class="metal"/><path d="M120 40 v48" class="metal"/>
+    </g>
+    <g class="s2 metal">
+      <path d="M28 36 l-14 -12 h6 l8 12 z"/>
+    </g>
+    <path d="M0 94 h160" class="s2 dash" stroke-dasharray="3 3"/>
+    <text x="80" y="116" class="lbl-s" text-anchor="middle">dents · émiette et nivelle en surface</text>
+  </svg>`,
 };

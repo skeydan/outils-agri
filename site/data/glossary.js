@@ -272,6 +272,18 @@ export const ENTRIES = [
     },
     sources: ['wiki-handgrubber', 'wiki-griffe', 'wiki-krail'],
   },
+  {
+    id: 'herse',
+    term: { fr: 'Herse', de: 'Egge', en: 'Harrow' },
+    alt: { fr: 'herse à dents, herse étrille', en: 'tine harrow, weed harrow' },
+    categories: ['sol'],
+    drawing: 'herse',
+    body: {
+      fr: 'Outil à dents ou à disques, tiré par un tracteur ou un animal, que l’on passe sur un sol déjà travaillé pour casser les mottes, niveler la surface et recouvrir légèrement les semis. La herse à dents travaille en surface ; la herse à disques, plus lourde, pénètre davantage. Elle prépare le lit de semence et, sur une jeune culture, peut arracher les plantules d’adventices.',
+      en: 'A toothed or disked implement, pulled by a tractor or an animal, drawn over already-worked soil to break clods, level the surface and lightly cover the seed. A tine harrow works the surface; a disc harrow is heavier and penetrates more. It prepares the seedbed and, on a young crop, can uproot weed seedlings.',
+    },
+    sources: ['wiki-herse'],
+  },
 ];
 
 // Source ids used by this tab, in the order they are numbered at the bottom.
@@ -305,4 +317,5 @@ export const SOURCE_ORDER = [
   'wiki-handgrubber',
   'wiki-griffe',
   'wiki-krail',
+  'wiki-herse',
 ];
