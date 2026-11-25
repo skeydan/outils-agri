@@ -1,4 +1,4 @@
-// The techniques data and the three thematic sketches: same completeness
+// The techniques data and the thematic sketches: same completeness
 // rules, plus every [n] citation in a sketch text must point to a source
 // number that exists in the tab's list.
 import { test } from 'node:test';
@@ -35,7 +35,7 @@ test('techniques: listed sources all exist and are cited', () => {
 });
 
 test('every sketch has a drawing, a legend, a text and sources', () => {
-  assert.ok(SKETCHES.length >= 2 && SKETCHES.length <= 4, `${SKETCHES.length} sketches`);
+  assert.ok(SKETCHES.length >= 12 && SKETCHES.length <= 24, `${SKETCHES.length} sketches`);
   for (const s of SKETCHES) {
     assert.match(SKETCH_DRAWINGS[s.drawing] ?? '', /^<svg[\s>]/, `${s.id}: drawing`);
     assert.ok(s.title.fr && s.title.en, `${s.id}: title`);
@@ -44,13 +44,45 @@ test('every sketch has a drawing, a legend, a text and sources', () => {
     const numbers = s.legend.map((l) => l.n);
     assert.deepEqual(numbers, numbers.map((_, i) => i + 1), `${s.id}: legend numbered 1..n`);
     for (const l of s.legend) {
-      assert.ok(l.term && l.note?.fr && l.note?.en, `${s.id}: legend item ${l.n}`);
+      const okTerm = typeof l.term === 'string'
+        ? l.term.trim().length > 0
+        : ['fr', 'de', 'en'].every((c) => l.term?.[c]?.trim());
+      assert.ok(okTerm, `${s.id}: legend item ${l.n} term`);
+      assert.ok(l.note?.fr && l.note?.en, `${s.id}: legend item ${l.n}`);
     }
     for (const code of ['fr', 'en']) {
       assert.ok(Array.isArray(s.body[code]) && s.body[code].length >= 2, `${s.id}: body.${code}`);
     }
     assert.ok(s.sources.length > 0, `${s.id}: no source`);
     for (const id of s.sources) assert.ok(SKETCH_SOURCE_ORDER.includes(id), `${s.id}: ${id} not in list`);
+  }
+});
+
+test('the scene sketches are present and labelled in French, German and English', () => {
+  const byId = new Map(SKETCHES.map((s) => [s.id, s]));
+  const scenes = [
+    'scene-sous-soleuse',
+    'scene-decompacteur',
+    'scene-broyeur',
+    'scene-rotavator',
+    'scene-goutte-bulbe',
+    'scene-labour',
+    'scene-compost',
+    'scene-sous-solage',
+    'cycle-couvert',
+  ];
+  for (const id of scenes) {
+    const s = byId.get(id);
+    assert.ok(s, `missing sketch ${id}`);
+    for (const code of ['fr', 'de', 'en']) {
+      assert.ok(s.title?.[code]?.trim(), `${id}: title.${code}`);
+      assert.ok(s.lead?.[code]?.trim(), `${id}: lead.${code}`);
+      for (const l of s.legend) {
+        assert.equal(typeof l.term, 'object', `${id}: legend ${l.n} term should be {fr, de, en}`);
+        assert.ok(l.term.fr && l.term.de && l.term.en, `${id}: legend ${l.n} term in three languages`);
+        assert.ok(l.note?.[code]?.trim(), `${id}: legend ${l.n} note.${code}`);
+      }
+    }
   }
 });
 
@@ -72,4 +104,20 @@ test('sketch citations point to a listed source number', () => {
 
 test('sketch source list only contains existing sources', () => {
   for (const id of SKETCH_SOURCE_ORDER) assert.ok(SOURCES[id], `SOURCES.${id} missing`);
+});
+
+test('sketches: every listed source is cited at least once', () => {
+  const cited = new Set();
+  for (const s of SKETCHES) {
+    for (const code of ['fr', 'en']) {
+      for (const para of s.body[code]) {
+        for (const m of para.matchAll(/\[([\d\s,]+)\]/g)) {
+          for (const n of m[1].split(',')) cited.add(Number(n.trim()));
+        }
+      }
+    }
+  }
+  for (const [i, id] of SKETCH_SOURCE_ORDER.entries()) {
+    assert.ok(cited.has(i + 1), `source ${i + 1} (${id}) is listed but never cited`);
+  }
 });

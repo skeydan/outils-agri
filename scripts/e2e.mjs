@@ -89,9 +89,9 @@ for (const device of Object.keys(devices)) {
 
       await page.click('#tabs a[data-tab="esquisses"]');
       await route(page, 'esquisses/main');
-      ok(await page.locator('figure.sketch').count() === 3, `${tag} 3 sketches`);
-      ok(await page.locator('figure.sketch svg').count() === 3, `${tag} 3 SVG drawings`);
-      ok(await page.locator('.sketch-legend').count() === 3, `${tag} 3 legends`);
+      ok(await page.locator('figure.sketch').count() === 12, `${tag} 12 sketches`);
+      ok(await page.locator('figure.sketch svg').count() === 12, `${tag} 12 SVG drawings`);
+      ok(await page.locator('.sketch-legend').count() === 12, `${tag} 12 legends`);
       overflow = await overflowOf(page);
       ok(overflow <= 0, `${tag} sketches: horizontal overflow ${overflow}px`);
       await page.screenshot({ path: `${SHOTS}/esquisses-${device}-${scheme}-${lang}.png`, fullPage: true });

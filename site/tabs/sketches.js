@@ -1,5 +1,6 @@
-// Tab « Esquisses thématiques » : three large drawings, each with a numbered
-// legend and a text that names the visible tools. Data in data/sketches.js.
+// Tab « Esquisses thématiques » : large drawings, each with a numbered legend
+// and a text that names the visible tools. Data in data/sketches.js. A legend
+// term is either a plain string (older sketches) or {fr, de, en}.
 
 import { SKETCHES, SKETCH_SOURCE_ORDER } from '../data/sketches.js';
 import { SKETCH_DRAWINGS } from '../drawings/sketches.js';
@@ -8,16 +9,18 @@ import { lang, onLangChange } from '../assets/site.js';
 import { sourceNumbers, citeHtml, sourceList } from './common.js';
 
 export const STR = {
-  's.title': { en: 'Thematic sketches', fr: 'Esquisses thématiques' },
+  's.title': { en: 'Thematic sketches', fr: 'Esquisses thématiques', de: 'Thematische Skizzen' },
   's.lead': {
-    en: 'Three drawings showing a process from start to finish, with the tools that take part in it. The numbered legend under each drawing names them.',
-    fr: 'Trois dessins qui montrent un processus de bout en bout, avec les outils qui y participent. La légende numérotée sous chaque dessin les nomme.',
+    en: 'Twelve drawings showing a process, a machine or a technique in context, with the tools that take part in it. The numbered legend under each drawing names them.',
+    fr: 'Douze dessins qui montrent un processus, une machine ou une technique en contexte, avec les outils qui y participent. La légende numérotée sous chaque dessin les nomme.',
+    de: 'Zwölf Zeichnungen, die einen Ablauf, eine Maschine oder eine Technik im Zusammenhang zeigen, mit den beteiligten Geräten. Die nummerierte Legende unter jeder Zeichnung benennt sie.',
   },
-  's.legend': { en: 'In the drawing', fr: 'Dans le dessin' },
-  's.sources': { en: 'Sources of this tab', fr: 'Sources de cet onglet' },
+  's.legend': { en: 'In the drawing', fr: 'Dans le dessin', de: 'Im Bild' },
+  's.sources': { en: 'Sources of this tab', fr: 'Sources de cet onglet', de: 'Quellen dieses Tabs' },
 };
 
 const t = (k) => STR[k]?.[lang()] ?? STR[k]?.en ?? k;
+const label = (v) => (typeof v === 'string' ? v : v?.[lang()] ?? v?.fr ?? '');
 const nums = sourceNumbers(SKETCH_SOURCE_ORDER, 'esquisses');
 
 let root = null;
@@ -35,7 +38,7 @@ function sketch(s) {
   for (const item of s.legend) {
     legend.append(h('li', {},
       h('span', { class: 'legend-n' }, String(item.n)),
-      h('strong', {}, item.term),
+      h('strong', {}, label(item.term)),
       ' — ',
       h('span', { class: 'muted' }, item.note[lang()] ?? item.note.fr)));
   }

@@ -38,8 +38,10 @@ A tab bar at the top with four tabs:
   C/N ratio, the nitrogen behaviour, the sowing window and a short chemistry
   text. The sunflower (*Helianthus annuus*) and the Jerusalem artichoke
   (*Helianthus tuberosus*) are kept as two distinct entries of the same genus.
-- **Esquisses thématiques** (`#esquisses`): 3 large drawings, each with a
-  numbered legend and a text naming the tools in play:
+- **Esquisses thématiques** (`#esquisses`): 12 large drawings, each with a
+  numbered legend and a text naming the tools in play. The first three show a
+  process from start to finish; the next nine show a machine, a gesture or a
+  technique in context:
   1. *Préparer un sol sans le retourner* — sous-soleuse, semelle compacte,
      grelinette, engrais vert, vers de terre.
   2. *Le faux semis en action* — travail superficiel, levée des adventices,
@@ -47,11 +49,28 @@ A tab bar at the top with four tabs:
   3. *L’irrigation goutte-à-goutte, du captage au goutteur* — forage, nappe
      phréatique, pompe, vanne électrique, borne d’irrigation, rampe de
      goutteurs.
+  4. *La sous-soleuse au champ* — tracteur, dents, semelle fendue derrière
+     l’outil, semelle intacte devant.
+  5. *Le décompacteur* — diagnostic du tassement, fosse d’observation,
+     comparaison des profondeurs avec la sous-soleuse.
+  6. *Du branchage au paillis* — branches, broyeur, broyat, paillis ou compost.
+  7. *Le rotavator et le lit de semence* — couche fraisée, lit de semence,
+     couche compactée sous la zone travaillée.
+  8. *Le bulbe du goutteur* — goutteur, volume réellement mouillé, racines,
+     sol resté sec ; complète l’esquisse 3.
+  9. *Le labour* — retournement de la bande, résidus enfouis, semelle à la
+     profondeur du soc.
+  10. *Le compost* — montée en température, retournements, compost mûr.
+  11. *Le sous-solage sur sol sec* — semelle continue avant, fissures et
+      infiltration après.
+  12. *Le cycle du couvert* — semis, couverture, destruction, enfouissement ;
+      s’appuie sur les plantes de l’onglet engrais verts.
 
 The interface is French/English (browser language, with a switch). The
 explanations are French; English versions are provided for the glossary and
-technique cards, and the sketch texts are translated too. Terms are always
-shown in the three languages.
+technique cards, and the sketch texts are translated too. The three-term
+labels of the scene sketches (title, lead, legend) are also given in German,
+ready for the interface. Terms are always shown in the three languages.
 
 ## Adding an entry
 
@@ -122,8 +141,10 @@ npm i && npm run e2e   # browser checks with Playwright, BASE=http://localhost:9
   source; ids and categories are valid; the four categories have the expected
   entries; every listed source exists, is https, and is cited.
 - `tests/content.test.mjs`: same checks for the techniques; every sketch has
-  a drawing, a numbered legend (1..n), both texts and sources; every `[n]`
-  citation in a sketch points to a source number that exists.
+  a drawing, a numbered legend (1..n), both texts and sources; the nine scene
+  sketches also carry French, German and English labels; every `[n]`
+  citation in a sketch points to a source number that exists, and every
+  listed source is cited.
 - `tests/engraisverts.test.mjs`: every green manure has its three terms, a
   scientific name, a family, a hand-drawn SVG, both portraits, both chemistry
   texts and a listed source; ids and service keys are valid; the sunflower and
@@ -132,7 +153,7 @@ npm i && npm run e2e   # browser checks with Playwright, BASE=http://localhost:9
   fallbacks for unknown routes and citation hashes.
 - `scripts/e2e.mjs`: screenshots of the four tabs (desktop and phone, light
   and dark, French and English, into `/tmp/agri-shots`); the tab bar and hash
-  routing; three terms and a source on every glossary card; the three
+  routing; three terms and a source on every glossary card; the twelve
   sketches and their legends; citations; language and theme switches. Fails on
   any console error or warning or any horizontal overflow.
 
@@ -150,12 +171,12 @@ site/
   data/glossary.js        the tools and 4 categories
   data/techniques.js      the 8 techniques
   data/engraisverts.js    the 12 green manures, services and source order
-  data/sketches.js        the 3 large sketches (titles, legends, texts)
+  data/sketches.js        the 12 large sketches (titles, legends, texts)
   data/sources.js         every source, by id
   drawings/tools.js       one hand-drawn SVG per tool
   drawings/techniques.js  one hand-drawn SVG per technique
   drawings/engraisverts.js one hand-drawn SVG per green manure
-  drawings/sketches.js    the three large drawings
+  drawings/sketches.js    the twelve large drawings
   tabs/glossary.js        renders the glossary
   tabs/techniques.js      renders the techniques
   tabs/engraisverts.js    renders the green manures
