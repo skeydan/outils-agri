@@ -1,7 +1,7 @@
 # outils-agri
 
 A small illustrated reference of farm tools, machines and techniques, in
-French, with the terms also given in German and English. Three tabs, hand-drawn
+French, with the terms also given in German and English. Four tabs, hand-drawn
 SVG sketches, light and dark, works on phones. A static site: no backend, no
 build step, no tracking (language and theme are kept in the browser’s local
 storage, nothing else). Every factual statement and number comes from a
@@ -11,7 +11,7 @@ Planned address: <https://agri.divergences.xyz> (GitHub Pages).
 
 ## What is on the page
 
-A tab bar at the top with three tabs:
+A tab bar at the top with four tabs:
 
 - **Outils et machines** (`#outils`): a glossary of **20 tools and machines**
   (22 cards, because the grelinette and the bêche each belong to two
@@ -31,6 +31,13 @@ A tab bar at the top with three tabs:
 - **Techniques** (`#techniques`): 8 techniques — sous-solage, labour, travail
   du sol, composter, faux semis, engrais verts, broyat, irrigation
   goutte-à-goutte — each with its own sketch, explanation and three terms.
+- **Engrais verts** (`#engraisverts`): 12 green manures and service plants —
+  phacélie, vesce commune, vesce velue, consoude, tournesol, topinambour,
+  raifort, ray-grass, moutarde blanche, seigle, sarrasin, trèfle incarnat.
+  Each card has its own SVG, the three terms **FR / DE / EN**, the family, the
+  C/N ratio, the nitrogen behaviour, the sowing window and a short chemistry
+  text. The sunflower (*Helianthus annuus*) and the Jerusalem artichoke
+  (*Helianthus tuberosus*) are kept as two distinct entries of the same genus.
 - **Esquisses thématiques** (`#esquisses`): 3 large drawings, each with a
   numbered legend and a text naming the tools in play:
   1. *Préparer un sol sans le retourner* — sous-soleuse, semelle compacte,
@@ -75,13 +82,14 @@ The tab is in the hash, so any tab can be linked and the back button works:
 ```
 #outils         the glossary (default)
 #techniques     the techniques
+#engraisverts   the green manures
 #esquisses      the large sketches
 ```
 
 Citations (`[3]`) scroll to the source list of the tab without changing the
 URL. The source ids are namespaced per tab (`#src-outils-…`,
-`#src-techniques-…`, `#src-esquisses-…`), so the three tabs can cite the same
-document without clashing.
+`#src-techniques-…`, `#src-engraisverts-…`, `#src-esquisses-…`), so the tabs
+can cite the same document without clashing.
 
 ## Run locally
 
@@ -116,9 +124,13 @@ npm i && npm run e2e   # browser checks with Playwright, BASE=http://localhost:9
 - `tests/content.test.mjs`: same checks for the techniques; every sketch has
   a drawing, a numbered legend (1..n), both texts and sources; every `[n]`
   citation in a sketch points to a source number that exists.
+- `tests/engraisverts.test.mjs`: every green manure has its three terms, a
+  scientific name, a family, a hand-drawn SVG, both portraits, both chemistry
+  texts and a listed source; ids and service keys are valid; the sunflower and
+  the Jerusalem artichoke remain two distinct *Helianthus* entries.
 - `tests/router.test.mjs`: parsing and writing the hash, default sections,
   fallbacks for unknown routes and citation hashes.
-- `scripts/e2e.mjs`: screenshots of the three tabs (desktop and phone, light
+- `scripts/e2e.mjs`: screenshots of the four tabs (desktop and phone, light
   and dark, French and English, into `/tmp/agri-shots`); the tab bar and hash
   routing; three terms and a source on every glossary card; the three
   sketches and their legends; citations; language and theme switches. Fails on
@@ -128,22 +140,25 @@ npm i && npm run e2e   # browser checks with Playwright, BASE=http://localhost:9
 
 ```
 site/
-  index.html              the page: header, tab bar, three empty panels, footer
+  index.html              the page: header, tab bar, four empty panels, footer
   app.js                  tab list, tab bar, hash routing, language and theme shell
   assets/router.js        parse and write the hash (pure, tested)
   assets/site.js          language and theme
   assets/site.css         shared tokens and layout
   assets/ui.js            small DOM helpers
   css/agri.css            cards, term tables, sketches, SVG colours
-  data/glossary.js        the 19 tools and 4 categories
+  data/glossary.js        the tools and 4 categories
   data/techniques.js      the 8 techniques
+  data/engraisverts.js    the 12 green manures, services and source order
   data/sketches.js        the 3 large sketches (titles, legends, texts)
   data/sources.js         every source, by id
   drawings/tools.js       one hand-drawn SVG per tool
   drawings/techniques.js  one hand-drawn SVG per technique
+  drawings/engraisverts.js one hand-drawn SVG per green manure
   drawings/sketches.js    the three large drawings
   tabs/glossary.js        renders the glossary
   tabs/techniques.js      renders the techniques
+  tabs/engraisverts.js    renders the green manures
   tabs/sketches.js        renders the sketches
   tabs/common.js          source numbering, citations, term block, source list
 deploy/default.conf.template   nginx config

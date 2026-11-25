@@ -12,11 +12,18 @@ import { initShell, lang, onLangChange } from './assets/site.js';
 import { parseHash, formatHash, resolveRoute } from './assets/router.js';
 import * as glossary from './tabs/glossary.js';
 import * as techniques from './tabs/techniques.js';
+import * as engraisverts from './tabs/engraisverts.js';
 import * as sketches from './tabs/sketches.js';
 
 const TABS = [
   { id: 'outils', label: { en: 'Tools & machines', fr: 'Outils et machines' }, sections: ['main'], module: glossary },
   { id: 'techniques', label: { en: 'Techniques', fr: 'Techniques' }, sections: ['main'], module: techniques },
+  {
+    id: 'engraisverts',
+    label: { en: 'Green manures', fr: 'Engrais verts', de: 'Gründüngung' },
+    sections: ['main'],
+    module: engraisverts,
+  },
   { id: 'esquisses', label: { en: 'Thematic sketches', fr: 'Esquisses thématiques' }, sections: ['main'], module: sketches },
 ];
 

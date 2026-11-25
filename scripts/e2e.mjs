@@ -1,4 +1,4 @@
-// Browser check of the single page: screenshots of the three tabs (desktop
+// Browser check of the single page: screenshots of the four tabs (desktop
 // and phone, light and dark, French and English), the tab bar and hash
 // routing, the presence of the three FR–DE–EN terms and a source on every
 // glossary card, the numbered legends of the sketches, and citations.
@@ -56,12 +56,12 @@ for (const device of Object.keys(devices)) {
       await page.goto(`${BASE}/`, { waitUntil: 'networkidle' });
       ok((await page.getAttribute('html', 'lang')) === lang, `${tag} browser language not picked up`);
       ok(new URL(page.url()).hash === '#outils', `${tag} default route: ${page.url()}`);
-      ok(await page.locator('#tabs a').count() === 3, `${tag} three tabs`);
+      ok(await page.locator('#tabs a').count() === 4, `${tag} four tabs`);
       ok((await page.textContent('#tabs a[aria-current="page"]')) === label(lang, 'Outils et machines', 'Tools & machines'), `${tag} tab label`);
       ok(await page.isVisible('[data-tab-panel="outils"]') && !(await page.isVisible('[data-tab-panel="techniques"]')), `${tag} only the glossary panel`);
-      ok(await page.locator('#tab-outils .entry').count() === 16, `${tag} 16 glossary cards`);
-      ok(await page.locator('#tab-outils .entry .term').count() === 16 * 3, `${tag} three terms per card`);
-      ok(await page.locator('#tab-outils .entry .entry-src a').count() >= 16, `${tag} a source on every card`);
+      ok(await page.locator('#tab-outils .entry').count() === 22, `${tag} 22 glossary cards`);
+      ok(await page.locator('#tab-outils .entry .term').count() === 22 * 3, `${tag} three terms per card`);
+      ok(await page.locator('#tab-outils .entry .entry-src a').count() >= 22, `${tag} a source on every card`);
       ok(await page.isVisible('#sources-outils'), `${tag} source list at the bottom`);
       let overflow = await overflowOf(page);
       ok(overflow <= 0, `${tag} glossary: horizontal overflow ${overflow}px`);
@@ -75,6 +75,17 @@ for (const device of Object.keys(devices)) {
       overflow = await overflowOf(page);
       ok(overflow <= 0, `${tag} techniques: horizontal overflow ${overflow}px`);
       await page.screenshot({ path: `${SHOTS}/techniques-${device}-${scheme}-${lang}.png`, fullPage: true });
+
+      await page.click('#tabs a[data-tab="engraisverts"]');
+      await route(page, 'engraisverts/main');
+      ok(await page.locator('#tab-engraisverts .entry').count() === 12, `${tag} 12 green manures`);
+      ok(await page.locator('#tab-engraisverts .entry .term').count() === 12 * 3, `${tag} three terms per plant`);
+      ok(await page.locator('#tab-engraisverts .entry svg').count() === 12, `${tag} one SVG per plant`);
+      ok(await page.isVisible('#sources-engraisverts'), `${tag} green-manure source list`);
+      ok(await page.isVisible('[data-tab-panel="engraisverts"]') && !(await page.isVisible('[data-tab-panel="techniques"]')), `${tag} only the green-manure panel`);
+      overflow = await overflowOf(page);
+      ok(overflow <= 0, `${tag} green manures: horizontal overflow ${overflow}px`);
+      await page.screenshot({ path: `${SHOTS}/engraisverts-${device}-${scheme}-${lang}.png`, fullPage: true });
 
       await page.click('#tabs a[data-tab="esquisses"]');
       await route(page, 'esquisses/main');
@@ -123,13 +134,13 @@ for (const device of Object.keys(devices)) {
   await route(page, 'outils/main');
   ok(await page.isVisible('#sources-outils'), 'forward returns to the glossary');
   // Every link stays on the page (a known route or a listed source) or is an outside https link.
-  for (const tab of ['outils', 'techniques', 'esquisses']) {
+  for (const tab of ['outils', 'techniques', 'engraisverts', 'esquisses']) {
     await page.click(`#tabs a[data-tab="${tab}"]`);
     await route(page, `${tab}/main`);
     const bad = await page.evaluate(() => [...document.querySelectorAll('a[href]')].map((a) => a.getAttribute('href')).filter((h) => {
       if (/^https:\/\//.test(h)) return false;
       if (/^#src-/.test(h)) return !document.getElementById(h.slice(1));
-      return !/^#(outils|techniques|esquisses)(\/main)?(\?.*)?$/.test(h);
+      return !/^#(outils|techniques|engraisverts|esquisses)(\/main)?(\?.*)?$/.test(h);
     }));
     ok(bad.length === 0, `${tab}: links that go nowhere: ${bad.join(', ')}`);
   }

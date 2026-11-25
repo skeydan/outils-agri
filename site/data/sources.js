@@ -191,4 +191,119 @@ export const SOURCES = {
     url: 'https://de.wikipedia.org/wiki/Krail',
     note: 'Handwerkzeug zur Bodenbearbeitung ; drei oder vier Zinken, Tülle (douille) ; synonymes : Kralle, Dunghaken, Dungharke, Vierzahn…',
   },
+  'bc-cover-crops': {
+    title: 'Government of British Columbia, « Cover Cropping Guide for British Columbia »',
+    url: 'https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/agriculture-and-seafood/agricultural-land-and-environment/soil-nutrients/cover-crops/aa_booklet_cover_crops_bc.pdf',
+    note: 'Fiches de 23 espèces : périodes et densités de semis, contribution azotée, piégeage des nitrates, biofumigation, mycorhizes.',
+  },
+  'perennia-cn': {
+    title: 'Perennia, « Fall Cover Crop Species Selection and Management » (2024)',
+    url: 'https://www.perennia.ca/wp-content/uploads/2024/07/Fall-Cover-Crop-Species-Selection-and-ManagementV3.pdf',
+    note: 'Tableau 3 : C/N mesurés en 2023 (vesce velue 8–10, seigle 8–17, ray-grass 12–28, moutarde brune 10–31).',
+  },
+  'ucanr-cn': {
+    title: 'University of California ANR, « Cover crop age and the C:N ratio »',
+    url: 'https://ucanr.edu/sites/default/files/2021-03/347248.pdf',
+    note: 'Valeurs de C/N : vesce velue 11, seigle végétatif 26, épiaison 37, paille 82, pois 29.',
+  },
+  'acsess-cn': {
+    title: 'Crops & Soils (ACSESS), « Nitrogen Availability from Cover Crops: Is It Always about the C:N Ratio? » (2020)',
+    url: 'https://www.sciencesocieties.org/publications/crops-soils/2020/january-february/nitrogen-availability-from-cover-crops-is-it-always',
+    note: 'Seuils : C/N > 30 immobilisation, < 20 libération ; trèfle incarnat 11–16, radis 10–19.',
+  },
+  'sare-mccp': {
+    title: 'SARE, « Managing Cover Crops Profitably », 3rd ed.',
+    url: 'https://www.sare.org/resources/managing-cover-crops-profitably-3rd-edition/',
+    note: 'C/N de la vesce velue voisin de 11 ; jusqu’à 200 lb N/acre en bonnes conditions.',
+  },
+  'inlivingcover-phacelia': {
+    title: 'Food Water Wellness Foundation, « Phacelia »',
+    url: 'https://inlivingcover.ca/cover-crop/phacelia/',
+    note: 'C/N 10–15 ; associations mycorhiziennes à arbuscules.',
+  },
+  'wiki-phacelie': {
+    title: 'Wikipédia (fr), « Phacélie à feuilles de tanaisie »',
+    url: 'https://fr.wikipedia.org/wiki/Phac%C3%A9lie_%C3%A0_feuilles_de_tanaisie',
+    note: 'Annuelle d’environ 1 m, semis de printemps, floraison mellifère, couverture dense, tendance à se ressemer.',
+  },
+  'wiki-vicia-sativa': {
+    title: 'Wikipédia (en), « Vicia sativa »',
+    url: 'https://en.wikipedia.org/wiki/Vicia_sativa',
+    note: 'Légumineuse fourragère et engrais vert, semis de printemps, fixation d’azote.',
+  },
+  'wiki-vicia-villosa': {
+    title: 'Wikipédia (en), « Vicia villosa »',
+    url: 'https://en.wikipedia.org/wiki/Vicia_villosa',
+    note: 'Engrais vert d’hiver rustique, jusqu’à 200 lb N/acre, résidus mulchants.',
+  },
+  'wiki-consoude': {
+    title: 'Wikipédia (en), « Symphytum officinale »',
+    url: 'https://en.wikipedia.org/wiki/Symphytum_officinale',
+    note: 'Racine pivotante jusqu’à 1,8 m, alcaloïdes pyrrolizidiniques toxiques, plante rustique.',
+  },
+  'howard-comfrey': {
+    title: 'Howard et al. (2018), « Comfrey Mulch Enriches Soil, But Does Not Improve an Indicator Crop within One Season », IJPSS 22(2)',
+    url: 'https://journalijpss.com/index.php/IJPSS/article/view/67',
+    note: 'Paillis de consoude : potassium et azote disponible du sol augmentés, pas de gain de rendement la première saison.',
+  },
+  'wiki-tournesol': {
+    title: 'Wikipédia (en), « Helianthus annuus »',
+    url: 'https://en.wikipedia.org/wiki/Helianthus_annuus',
+    note: 'Annuel jusqu’à 3 m, propriétés allélopathiques attribuées à des composés phénoliques, usage en couvert.',
+  },
+  'southern-sunflower': {
+    title: 'Southern Cover Crops, « Sunflower (Helianthus annuus) cover crop information sheet »',
+    url: 'https://southerncovercrops.org/wp-content/uploads/2020/05/Sunflower-P-Mt-RV.pdf',
+    note: 'Pivot qui perce les couches compactées, 2 000–5 000 lb MS/acre, semis 10–40 lb/acre, résidus ligneux.',
+  },
+  'wiki-topinambour': {
+    title: 'Wikipédia (en), « Jerusalem artichoke »',
+    url: 'https://en.wikipedia.org/wiki/Jerusalem_artichoke',
+    note: 'Vivace à tubercules, inuline 8–13 %, 18–28 t/ha de feuillage, allélopathie et caractère envahissant.',
+  },
+  'wiki-raifort': {
+    title: 'Wikipédia (en), « Horseradish »',
+    url: 'https://en.wikipedia.org/wiki/Horseradish',
+    note: 'Racine à sinigrine et gluconasturtiine, myrosinase → allyl-isothiocyanate ; vivace envahissante.',
+  },
+  'biofumigation-review': {
+    title: '« A review of biofumigation effects with plant materials », New Plant Protection (2023)',
+    url: 'https://onlinelibrary.wiley.com/doi/10.1002/npp2.21',
+    note: 'Glucosinolates + myrosinase → isothiocyanates ; broyage fin et incorporation immédiate.',
+  },
+  'wiki-lolium': {
+    title: 'Wikipédia (en), « Lolium »',
+    url: 'https://en.wikipedia.org/wiki/Lolium',
+    note: 'Genre des ray-grass, annuels ou vivaces, en touffes, utilisés en fourrage et couverture.',
+  },
+  'wiki-white-mustard': {
+    title: 'Wikipédia (en), « White mustard »',
+    url: 'https://en.wikipedia.org/wiki/White_mustard',
+    note: 'Brassicacée annuelle, glucosinolates, croissance rapide.',
+  },
+  'iastate-rye': {
+    title: 'Iowa State University, INRC, « Effect of winter cereal rye cultivar selection and herbicide choice… »',
+    url: 'https://inrc.cals.iastate.edu/research-project/effect-winter-cereal-rye-cultivar-selection-and-herbicide-choice-seedling-disease',
+    note: 'C/N du seigle > 30, benzoxazinoïdes allélopathiques, risque d’immobilisation de l’azote.',
+  },
+  'wiki-rye': {
+    title: 'Wikipédia (en), « Rye »',
+    url: 'https://en.wikipedia.org/wiki/Rye',
+    note: 'Céréale d’hiver rustique, biomasse et couverture du sol.',
+  },
+  'wiki-buckwheat': {
+    title: 'Wikipédia (en), « Buckwheat »',
+    url: 'https://en.wikipedia.org/wiki/Buckwheat',
+    note: 'Annuel d’été à croissance rapide, allélopathie, mobilisation du phosphore.',
+  },
+  'saadat-buckwheat': {
+    title: 'Saadat et al. (2025), « Contribution of Roots and Shoots of Three Summer Cover Crops to Soil C and N Cycling Post-Termination », Agronomy 15(6):1467',
+    url: 'https://doi.org/10.3390/agronomy15061467',
+    note: 'C/N du sarrasin : environ 30 pour les parties aériennes, 40–50 pour les racines ; décomposition lente.',
+  },
+  'wiki-crimson-clover': {
+    title: 'Wikipédia (en), « Trifolium incarnatum »',
+    url: 'https://en.wikipedia.org/wiki/Trifolium_incarnatum',
+    note: 'Légumineuse annuelle, fleur rouge, nectar et pollinisateurs.',
+  },
 };

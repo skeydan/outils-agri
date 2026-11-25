@@ -15,6 +15,10 @@
   --water: #1a93ad;
   --badge: #146b45;
   --on-badge: #ffffff;
+  --flower-yellow: #d9a52a;
+  --flower-purple: #7a5aa8;
+  --flower-white: #f3efe3;
+  --flower-red: #b63b47;
 }
 
 :root[data-theme="dark"] {
@@ -29,6 +33,10 @@
   --soil-deep: #7a5330;
   --water: #38b3cc;
   --badge: #0f5b3a;
+  --flower-yellow: #e0b64a;
+  --flower-purple: #a98bd6;
+  --flower-white: #e8e3d4;
+  --flower-red: #e06a72;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,6 +52,10 @@
     --soil-deep: #7a5330;
     --water: #38b3cc;
     --badge: #0f5b3a;
+    --flower-yellow: #e0b64a;
+    --flower-purple: #a98bd6;
+    --flower-white: #e8e3d4;
+    --flower-red: #e06a72;
   }
 }
 
@@ -86,6 +98,32 @@ h1 { margin-top: 10px; }
 .entry-src { margin: 0; }
 .entry .note { margin: 0; }
 .entry .note::before { content: ""; }
+
+/* Green manures --------------------------------------------------------- */
+.ev-cards { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.ev-entry { gap: 9px; }
+.ev-entry h2 { font-size: 1.12rem; }
+.ev-entry .scientific { margin: -4px 0 0; font-style: italic; color: var(--ink-2); font-size: 0.88rem; }
+.ev-facts {
+  display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; margin: 0;
+  background: var(--surface-2); border-radius: 9px; padding: 8px 10px; font-size: 0.9rem;
+}
+.ev-facts dt {
+  color: var(--ink-2); font-size: 0.76rem; font-weight: 700;
+  letter-spacing: 0.03em; white-space: nowrap;
+}
+.ev-facts dd { margin: 0; }
+.ev-services { display: flex; flex-wrap: wrap; gap: 4px; list-style: none; padding: 0; margin: 0; }
+.ev-services li {
+  font-size: 0.72rem; background: var(--note); border: 1px solid var(--hairline);
+  border-radius: 999px; padding: 2px 7px;
+}
+.ev-entry .character { margin: 0; font-size: 0.95rem; }
+.ev-entry .chem-h {
+  margin: 6px 0 0; font-size: 0.76rem; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--ink-2);
+}
+.ev-entry .chem { margin: 0; font-size: 0.92rem; }
 
 /* FR / DE / EN block ---------------------------------------------------- */
 .terms {
@@ -147,6 +185,10 @@ h1 { margin-top: 10px; }
 .soil { fill: var(--soil); }
 .soil-d { fill: var(--soil-deep); }
 .water { fill: var(--water); }
+.fl-y { fill: var(--flower-yellow); }
+.fl-p { fill: var(--flower-purple); }
+.fl-w { fill: var(--flower-white); stroke: var(--ink-2); stroke-width: 0.8; }
+.fl-r { fill: var(--flower-red); }
 .water-s { fill: none; stroke: var(--water); stroke-width: 3; stroke-linecap: round; }
 .warn { fill: none; stroke: var(--danger); stroke-width: 2; stroke-linecap: round; }
 .lbl { font-size: 12px; fill: var(--ink); font-family: var(--font); }
