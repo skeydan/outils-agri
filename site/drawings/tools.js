@@ -354,4 +354,40 @@ export const TOOL_DRAWINGS = {
     <path d="M0 94 h160" class="s2 dash" stroke-dasharray="3 3"/>
     <text x="80" y="116" class="lbl-s" text-anchor="middle">dents · émiette et nivelle en surface</text>
   </svg>`,
+
+  epierreuse: `<svg viewBox="0 0 160 120" role="img" aria-hidden="true">
+    <rect x="0" y="88" width="160" height="32" class="soil"/>
+    <rect x="0" y="88" width="160" height="5" class="soil-d"/>
+    <g class="s">
+      <path d="M16 60 h30 v8 h-30 z" class="metal"/>
+      <circle cx="26" cy="76" r="11" class="metal"/><circle cx="26" cy="76" r="4" class="metal-d"/>
+      <path d="M46 50 h88 v20 h-88 z" class="metal"/>
+      <path d="M134 44 h12 v26 h-12 z" class="metal-d"/>
+    </g>
+    <g class="s2 metal">
+      <path d="M52 66 l78 -10"/>
+      <path d="M52 58 l0 8"/><path d="M60 57 l0 8"/><path d="M68 56 l0 8"/><path d="M76 55 l0 8"/><path d="M84 54 l0 8"/>
+    </g>
+    <g class="metal-d">
+      <circle cx="78" cy="61" r="5"/><circle cx="98" cy="55" r="5"/><circle cx="118" cy="49" r="5"/>
+    </g>
+    <path d="M0 96 h160" class="s2 dash" stroke-dasharray="3 3"/>
+    <text x="80" y="116" class="lbl-s" text-anchor="middle">tamis · pierres → trémie</text>
+  </svg>`,
+
+  rouleau: `<svg viewBox="0 0 160 120" role="img" aria-hidden="true">
+    <rect x="0" y="92" width="160" height="28" class="soil"/>
+    <rect x="0" y="92" width="160" height="5" class="soil-d"/>
+    <g class="s">
+      <path d="M24 48 h30 v8 h-30 z" class="metal"/>
+      <path d="M24 48 v12" class="metal"/>
+      <path d="M22 68 l6 0 l0 8 l-6 0 z" class="metal"/>
+    </g>
+    <g class="s2 metal">
+      <rect x="50" y="58" width="64" height="24" rx="12" class="metal"/>
+      <path d="M60 58 v24"/><path d="M74 58 v24"/><path d="M88 58 v24"/><path d="M102 58 v24"/>
+    </g>
+    <path d="M0 98 h160" class="s2 dash" stroke-dasharray="3 3"/>
+    <text x="80" y="116" class="lbl-s" text-anchor="middle">cylindre · rappuie le sol</text>
+  </svg>`,
 };

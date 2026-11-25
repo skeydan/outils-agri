@@ -100,8 +100,8 @@ export const ENTRIES = [
   },
   {
     id: 'gyrobroyeur',
-    term: { fr: 'Gyrobroyeur', de: 'Schlegelmäher', en: 'Flail mower' },
-    unsure: ['de'],
+    term: { fr: 'Gyrobroyeur', de: 'Schlegelmulcher', en: 'Flail mower' },
+    alt: { de: 'Schlegelmäher' },
     categories: ['broyage'],
     drawing: 'gyrobroyeur',
     body: {
@@ -124,6 +124,7 @@ export const ENTRIES = [
   {
     id: 'rateau',
     term: { fr: 'Râteau', de: 'Harke / Rechen', en: 'Rake' },
+    alt: { fr: 'gratte' },
     categories: ['main'],
     drawing: 'rateau',
     body: {
@@ -284,6 +285,34 @@ export const ENTRIES = [
     },
     sources: ['wiki-herse'],
   },
+  {
+    id: 'epierreuse',
+    term: { fr: 'Épierreuse', de: 'Steinsammler', en: 'Stone picker' },
+    alt: { de: 'Steinschwader', en: 'rock picker' },
+    categories: ['sol'],
+    drawing: 'epierreuse',
+    body: {
+      fr: 'Machine remorquée qui débarrasse un champ des pierres remontées par le travail du sol ou le gel. Des dents ou un tapis relèvent les pierres, une grille les sépare de la terre — qui retombe au sol — et elles sont remontées dans une trémie, vidée ensuite en bout de parcelle. Elle protège les machines de récolte et améliore le lit de semence des sols caillouteux.',
+      en: 'A trailed machine that clears a field of the stones brought up by tillage or frost. Tines or a belt lift the stones, a grid separates them from the soil — which falls back to the ground — and they are carried up into a hopper, emptied later at the field edge. It protects harvesting machinery and improves the seedbed on stony soils.',
+    },
+    sources: ['wiki-steinsammler'],
+  },
+  {
+    id: 'rouleau',
+    term: { fr: 'Rouleau', de: 'Walze', en: 'Roller' },
+    alt: { fr: 'rouleau agricole, rouleau lisse', de: 'Ackerwalze', en: 'land roller, field roller' },
+    categories: ['sol'],
+    drawing: 'rouleau',
+    body: {
+      fr: 'Gros cylindre, lisse, à anneaux ou à cage, tiré derrière le tracteur pour rappuyer le sol. Après le semis, le roulage met la terre au contact de la graine et favorise la levée ; il écrase aussi les petites mottes et les cailloux. Sur une jeune prairie, il redresse les plantes déchaussées par le gel.',
+      en: 'A large cylinder, smooth, ringed or cage type, pulled behind the tractor to firm the soil. After sowing, rolling brings the earth into contact with the seed and helps germination; it also crushes small clods and stones. On a young pasture it presses back plants lifted by frost.',
+    },
+    note: {
+      fr: 'L’outil est le rouleau (de. Walze) ; l’opération s’appelle le roulage (de. Walzen, en. rolling).',
+      en: 'The tool is the roller (de. Walze); the operation is called rolling (fr. roulage, de. Walzen).',
+    },
+    sources: ['wiki-rouleau'],
+  },
 ];
 
 // Source ids used by this tab, in the order they are numbered at the bottom.
@@ -318,4 +347,6 @@ export const SOURCE_ORDER = [
   'wiki-griffe',
   'wiki-krail',
   'wiki-herse',
+  'wiki-steinsammler',
+  'wiki-rouleau',
 ];

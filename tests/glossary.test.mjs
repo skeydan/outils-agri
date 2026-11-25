@@ -68,7 +68,7 @@ test('every entry has a hand-drawn SVG', () => {
 
 test('the four categories have the expected entries', () => {
   const count = (id) => ENTRIES.filter((e) => e.categories.includes(id)).length;
-  assert.equal(count('sol'), 7);
+  assert.equal(count('sol'), 9);
   assert.equal(count('broyage'), 3);
   assert.equal(count('main'), 8);
   assert.equal(count('eau'), 5);

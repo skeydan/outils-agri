@@ -116,6 +116,16 @@ export const SOURCES = {
     url: 'https://fr.wikipedia.org/wiki/Herse_(agriculture)',
     note: 'Herse : outil à dents ou à disques pour émietter, niveler et désherber en surface.',
   },
+  'wiki-steinsammler': {
+    title: 'Wikipédia (de), « Steinsammler »',
+    url: 'https://de.wikipedia.org/wiki/Steinsammler',
+    note: 'Steinsammler : machine qui ramasse les pierres d’un champ, les sépare de la terre et les remonte en trémie (fr. épierreuse, en. stone picker).',
+  },
+  'wiki-rouleau': {
+    title: 'Wikipédia (fr), « Rouleau agricole »',
+    url: 'https://fr.wikipedia.org/wiki/Rouleau_agricole',
+    note: 'Rouleau : cylindre lisse ou à anneaux pour rappuyer le sol ; l’opération s’appelle le roulage (de. Walzen).',
+  },
   'wiki-tournevis': {
     title: 'Wikipédia (fr), « Tournevis »',
     url: 'https://fr.wikipedia.org/wiki/Tournevis',
